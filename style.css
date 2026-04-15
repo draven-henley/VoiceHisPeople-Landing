@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 body {
-	background-color: #232136;
+	background-color: #2a273f;
 
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	margin: 0;
 }
 
 h1, h2 {
@@ -13,7 +18,7 @@ h1, h2 {
 
 	font-family: "Google Sans", sans-serif;
 
-	color: #e0def4;
+	color: #232136;
 }
 
 h1 {
@@ -24,12 +29,21 @@ h2 {
 	margin-top: 0;
 }
 
+#header {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	width: 100%;
+	background-color: #56949f;
+}
 
 #mission {
+	max-width: 80%;
 	padding: 1em;
 
-	border: 2px solid #393552;
-	border-radius: 5px;
+	border: 10px double #393552;
+	border-radius: 15px;
 
 	font-family: "Google Sans", sans-serif;
 
@@ -39,7 +53,7 @@ h2 {
 
 #banner {
 	width: 100%;
-	margin-top: 5em;
+	margin-top: 4em;
 	font-size: 2em;
 
 	display: flex;
@@ -62,3 +76,9 @@ h2 {
 	margin-left: .25em;
 }
 
+#empty {
+	flex-grow: 1;
+	width: 100%;
+	
+	background-color: #393552;
+}
