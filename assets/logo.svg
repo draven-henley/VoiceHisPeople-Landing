@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+	<defs>
+		<style>
+			* {stroke-width: 4;}
+			.building {
+				stroke: black;
+				fill: black;
+			}
+			.detail {
+				stroke: white;
+				fill: black;
+			}
+			.highlight {
+				stroke: red;
+			}
+		</style>
+	</defs>
+
+	<!-- Main Church -->
+	<polygon mask="url(#church-features)" class="building" points="
+		100 398,
+		300 398,
+		300 220,
+		350 255,
+		200 150,
+		50 255,
+		100 220"
+	/>
+
+	<!-- Side Rooms -->
+	<polygon mask="url(#church-features)" class="building" points="
+		2 398,
+		100 398,
+		100 270,
+		2 330"
+	/>
+	<polygon mask="url(#church-features)"  class="building" points="
+		398 398,
+		300 398,
+		300 270,
+		398 330"
+	/>
+
+	<mask id="church-features" mask-type="luminance">
+		<!-- Show by default -->
+		<rect x="0" y="0" width="400" height="400" fill="white"/>
+
+		<!-- Cross -->
+		<polygon class="detail" points="
+			190 180,
+			210 180,
+			210 200,
+			230 200,
+			230 220,
+			210 220,
+			210 260,
+			190 260,
+			190 220,
+			170 220,
+			170 200,
+			190 200"
+		/>
+
+		<!-- Door -->
+		<path class="detail" d="
+			M 170 398
+			L 170 348
+			A 10 10 0 0 1 230 348
+			L 230 398"
+		/>
+
+		<!-- Windows -->
+		<path class="detail" d="
+			M 25 385
+			L 25 335
+			A 50 150 0 0 1 75 335
+			L 75 385
+			L 23 385
+
+			M 50 385 L 50 315
+			M 25 335 L 75 335
+			M 25 350 L 75 350
+			M 25 365 L 75 365"
+		/>
+		<path class="detail" d="
+			M 325 385
+			L 325 335
+			A 100 600 0 0 1 375 335
+			L 375 385
+			L 323 385
+
+			M 350 385 L 350 315
+			M 325 335 L 375 335
+			M 325 350 L 375 350
+			M 325 365 L 375 365"
+		/>
+	</mask>
+
+
+	<!-- TODO: Add Flame In Door -->
+
+
+	<!-- Antenna -->
+	<line x1="200" y1="150" x2="200" y2="80" class="building" />
+	<circle cx="200" cy="74" r="8" class="building"/>
+
+	<!-- Radio lines -->
+	<path class="highlight" d="
+		M 180 94  A 200 100 0 0 1 180 54
+		M 160 104 A 200 120 0 0 1 160 44
+		M 140 114 A 200 140 0 0 1 140 34
+
+		M 220 54  A 200 100 0 0 1 220 94
+		M 240 44  A 200 120 0 0 1 240 104
+		M 260 34  A 200 140 0 0 1 260 114
+	"/>
+</svg>
